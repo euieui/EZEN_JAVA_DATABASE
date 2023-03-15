@@ -1,0 +1,29 @@
+https://www.oracle.com/database/technologies/xe-prior-release-downloads.html
+
+sqlplus
+create user scott identified by tiger;
+grant dba to scott;
+conn -> scott -> tiger (scott에 접속)
+
+sqlplus / as sysdba 강제로긴
+
+이클립스와 오라클연결
+이클립스에서 밑에 -> data source Explorer -> database connections 우클릭 new 클릭 -> 
+oracle 선택후 next -> 위 drivers 오른쪽 new drivers definition 클릭 -> oracle thin driver 11 클릭 후 위에 tab jar list 클릭 -> 
+밑에 ojdbc14.jar 클릭 후 remove jar/zip 클릭(그러면 삭제됨) -> add jar/zip 클릭 -> 
+c 드라이브 oraclexe / app / oracle / product / 11.2 / server / jdbc / lib / ojdbc6.jar 열기 -> 
+3번째 tap properties 클릭 -> connection URL 란에 server 지우고 localhost로 변경 그 줄에 맨지막 db 도 지우고 xe로 변경 -> 
+database Name 란 db도 xe 로 변경 -> User ID scott 넣기 password 에 tiger 넣고 ok -> save password 체크 test connection 누르면 ping succeeded 가 나와야 한다! ->
+
+cmd 에서 desc 테이블이름 넣으면 그에 대한 정보가 나옴
+
+백업파일 넣는법
+cmd 에서
+드라이버선택후  (d: or  c:)
+cd backup 입력 -> imp scott/tiger file=expall.dmp log=empall.log ignore=y grants=y rows=y id어쩌구=y full=y 잘모르겠다
+
+orcaldatabase 위에서 오른쪽버튼 properties 클릭
+-> java Build Path 클릭 ->  위탭에서 LIBRARIES클릭
+-> 오른쪽 2번재 add External JARs... 클릭
+-> ojdbc6.jar 열기
+-> 자바에 있는 Class.forName(driver); 예외 처리하면 빨간줄이 없어진다!
