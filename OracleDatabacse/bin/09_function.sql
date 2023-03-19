@@ -91,7 +91,7 @@ select to_char(sysdate,'yyyy-mm-dd') from dual;
 --[23] to_date(): 날짜형(date)으로 변환
 select to_date('2019/12/31','yyyy/mm/dd') from dual;
 
-
+select * from emp;
 -- 그 외 활용가능한 함수들...
 --[24] nvl() : NULL인 데이터를 다른 ㄷ이터로 변경
 select comm/100 as comm_pct from emp;
@@ -107,6 +107,8 @@ select power(3,2), power(3,3), power(3,3.0001) from dual;
 select sqrt(2) , sqrt(5) from dual;
 
 
+
+select * from employees;
 --[25] decode() : switch 문과 같은 기능
 select employee_id, emp_name, decode(department_id, 
 

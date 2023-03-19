@@ -71,6 +71,8 @@ create table departments (
 	UPDATE_DATE DATE
 );
 
+select * from emplyees;
+
 create table employees (
 	EMPLOYEE_ID number(6) not null,
 	EMP_NAME varchar2(80) not null,
@@ -86,6 +88,8 @@ create table employees (
 	CREATE_DATE DATE,
 	UPDATE_DATE DATE
 );
+
+select * from products;
 
 create table products(
 	PROD_ID number(6) not null,

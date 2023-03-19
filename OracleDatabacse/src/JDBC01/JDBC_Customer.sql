@@ -1,3 +1,4 @@
+select * from customer;
 create table customer(
 	num number(3),
 	name varchar2(10),
