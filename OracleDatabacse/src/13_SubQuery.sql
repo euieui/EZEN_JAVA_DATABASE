@@ -24,7 +24,10 @@ select ename, sal ,job from emp where sal>=(select avg(sal) from emp);
 -- distinct 필드명 : 필드값의 중복된 값이 여러개라면 한번만 출력
 select * from emp where deptno in(select distinct deptno from emp where sal>=3000); -- distinct 중복 제거!!
 
--- [연습 문제]
+-- [연습 문제] 
+select  * from emp;
+
+select ename, job, sal from emp where sal>(select max(sal) from emp where deptno = 30);
 -- 30번 부서 소속 사원들 중에서 급여를 가장 많이 받는 사원보다 ... 급여가 더 많은 사원의 이름과 job, 급여
 -- # 첫번째 방법
 select ename, job ,sal from emp where sal>(select  max(sal) from emp where deptno in 30);

@@ -20,7 +20,7 @@ cmd 에서 desc 테이블이름 넣으면 그에 대한 정보가 나옴
 백업파일 넣는법
 cmd 에서
 드라이버선택후  (d: or  c:)
-cd backup 입력 -> imp scott/tiger file=expall.dmp log=empall.log ignore=y grants=y rows=y id어쩌구=y full=y 잘모르겠다
+cd backup 입력 -> imp scott/tiger file=expall.dmp log=empall.log ignore=y grants=y rows=y indexes=y full=y 잘모르겠다
 
 orcaldatabase 위에서 오른쪽버튼 properties 클릭
 -> java Build Path 클릭 ->  위탭에서 LIBRARIES클릭

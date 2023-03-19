@@ -62,19 +62,19 @@ drop sequence member_seq;
 create sequence member_seq start with 6 increment by 1;
 
 
-insert into memberlist values (member_seq.nextVal,'추신수','010-5656-1234','84/07/07',240,'20/10/01','M',28);
-insert into memberlist values (member_seq.nextVal,'류현진','010-3333-1234','83/08/08',142,'20/10/01','M',27);
-insert into memberlist values (member_seq.nextVal,'손흥민','010-4444-1234','82/09/23',220,'20/10/01','M',23);
-insert into memberlist values (member_seq.nextVal,'이청용','010-6666-1234','81/06/14',440,'20/10/01','F',36);
-insert into memberlist values (member_seq.nextVal,'이영표','010-2580-1234','82/03/16',140,'20/10/01','M',31);
-insert into memberlist values (member_seq.nextVal,'최지만','010-7777-1234','83/04/14',340,'20/10/01','F',29);
+insert into memberlist values (member_seq.nextVal,'추신수','010-5656-1234','84/07/07',240,'20/10/01',28,'M');
+insert into memberlist values (member_seq.nextVal,'류현진','010-3333-1234','83/08/08',142,'20/10/01',27,'M');
+insert into memberlist values (member_seq.nextVal,'손흥민','010-4444-1234','82/09/23',220,'20/10/01',23,'M');
+insert into memberlist values (member_seq.nextVal,'이청용','010-6666-1234','81/06/14',440,'20/10/01',36,'F');
+-- insert into memberlist values (member_seq.nextVal,'이영표','010-2580-1234','82/03/16',140,'20/10/01','M',31); 왜 공부하는데 여기 바뀌었지?
+-- insert into memberlist values (member_seq.nextVal,'최지만','010-7777-1234','83/04/14',340,'20/10/01','F',29); 흠
 
 -- rentlist 테이블도 rent_seq 를 이용해서 10개의 데이터를 추가해주세요
 select * from rentlist;
 insert into rentlist values ('2020/10/01',rent_seq.nextVal,16,2,100);
 insert into rentlist values ('2020/10/01',rent_seq.nextVal,17,3,100);
 insert into rentlist values ('2020/10/02',rent_seq.nextVal,18,4,200);
-insert into rentlist values ('2020/10/02',rent_seq.nextVal,19,4,100);
+insert into rentlist values ('2020/10/02',rent_seq.nextVal,19,4,100);  -- num가 있는사람만 들어가겠지 ㅇㅇ
 insert into rentlist values ('2020/10/03',rent_seq.nextVal,20,6,200);
 insert into rentlist values ('2020/10/03',rent_seq.nextVal,16,7,300);
 insert into rentlist values ('2020/10/04',rent_seq.nextVal,17,8,100);

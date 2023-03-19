@@ -32,7 +32,7 @@ select * from booklist;
 select subject, makeyear from booklist;
 
 -- [5] 각각의 필드명에 별칭을 부여해서 출력
-select subject as 도서제목, makeyear as 출판년도 from booklist;
+select subject as 도서제목, makeyear as 출판년도 from booklist; -- select subject as 도서제목, makeyear as 출판년도 from booklist; 별칭!
 
 -- [6] 중복 제거
 select distinct booknum from rentlist;
@@ -47,7 +47,7 @@ select * from memberlist where name like '홍%';
 select * from memberlist where birth >='1983-01-01';
 -- [10] 사은포인트(BPOINT) 가 250원 이상이고 1982년 이후로 태어난회원의 모든 정보 (and, or 연산자 사용)
 select * from memberlist where birth >='1982-01-01' and bpoint >=250;
--- [11] 제작년도가 2016년 이전이거나 입고가격(inprice)이 18000 이하인 book정보
+-- [11] 제작년도가 2016년 이전이거나 입고가격(inprice)이 18000 이하인 book정보 select * from where makeyear < 2016 or inprice <= 18000; 여기서 makeyear 
 select * from booklist where makeyear <2016 or inprice <=18000; 
 -- [12] 성명이 '이'로 시작하는 회원의 모든 정보
 select * from memberlist where name like '이%';
@@ -55,9 +55,10 @@ select * from memberlist where name like '이%';
 select * from memberlist where name like '%용';
 -- [14] 도서 제목에 '이'가 포함되는 도서 정보
 select * from booklist where subject like '%이%';
--- [15] 성별이가 NULL 이 아닌 회원의 이름과 전화번호
+-- [15] 성별이가 NULL 이 아닌 회원의 이름과 전화번호 -- 여긴 이름과 전화번호 니까 select name, phone from memberlist where gender is not null;
 select * from memberlist where gender is null;   
 select * from memberlist where gender is not null;
+
 -- [16] 도서제목에 두번째 글자가 '것'인 도서 정보  --?
 select * from booklist where subject like '_것%';
 
@@ -109,7 +110,7 @@ select * from emp order by job desc, hiredate desc;
 
 -- 그 외 활용하기 좋은 select 에 대한 예제
 -- 부서번호가 10이 아닌 사원(아래 두 문장은 같은 의미의 명령입니다
-select * from emp where not (deptno=10);
+select * from emp where not (deptno=10); -- = 대신 사용하는게 <>(not ) 의미를 포함
 select * from emp where deptno<>10;
 
 -- 급여가 1000달러 이상, 3000 달러 이하

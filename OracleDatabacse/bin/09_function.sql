@@ -15,7 +15,10 @@ select lower('Hong Kil Dong') as "소문자" from dual;
 -- [4] upper(): 모든 문자를 대문자로 변환
 select upper('Hong Kil Dong') as "대문자" from dual;
 -- [5] initcap(): 첫자만 대문자로 변환
-select initcap('hong kil dong') as "첫글자만 대문자" from dual;
+select initcap('hong kil dong') as "첫글자만 대문자" from dual; --
+
+-- select * from emp;
+-- select initcap(ename) as "가능" from emp; 가능!
 
 -- [6] concat() : 문자열 연결
 select concat('이젠 IT ', '아카데미') from dual;
@@ -27,7 +30,7 @@ select substr('홍길동 만세',2,4) from dual;
 -- 시작 번째 부터 글자수를 나타 냅니다. 위의 예경우 2번재 글자부터 네글자 표시
 
 -- [9] instr() : 문자열 시작 위치
-select instr('홍길동 만세 동그라미','동') from dual;
+select instr('홍길동 만세 동그라미','동') from dual;  -- 09_function 잘 알아야겠네
 
 -- [10] lpad(), rpad() : 자리 채우기
 select lpad('Oracle', 20, '#') from dual; -- ##############Oracle
@@ -77,7 +80,7 @@ select floor(months_between('2021-12-31','2020-07-10')) from dual; --17.677419
 select add_months(sysdate, 200) from dual; -- 2038-06-05 17:13:38.0
 
 --[20] next_day() : 다가올 요일에 해당하는 날짜 - 오늘 날짜(sysdate)에서 가장 가까운 일요일
-select next_day(sysdate,'일요일') from dual;
+select next_day(sysdate,'월요일') from dual;
 
 --[21] last_day() : 해당 달의 마지막 일 수
 select last_day(sysdate) from dual;

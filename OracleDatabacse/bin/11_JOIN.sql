@@ -76,6 +76,7 @@ select a.rentdate,b.subject,c.name, c.bpoint,b.rentprice  from rentlist a, bookl
 -- outer join
 -- 조인 조건에 만족하지 못해서 해당 결과를 출력시에 누락이 되는 문제점이 발생할때
 -- 해당 레코드를 출력하는 조인
+select a.booknum,a.subject,b.rentdate from booklist a, rentlist b where a.booknum=b.booknum; -- 둘의 차이 알겠지 null 포함하면서
 select a.booknum,a.subject,b.rentdate from booklist a, rentlist b where a.booknum=b.booknum(+); -- rentlist 에 없는걸 출력함
 
 --outer 조인으로 emp 테이블의 인원에 대한 부서명을 출력하되 부서명이 없는 필드는

@@ -32,8 +32,9 @@ select rentdate, avg(discount) from rentlist group by rentdate order by rentdate
 select rentdate, count(*) from rentlist group by rentdate;
 
 
--- employees 테이블의 부서id별 급여의 평균
-select * from employees;
+-- employees 테이블의 부서id별 급여의 평균 
+
+select * from employees; -- 아하 이해함
 select department_id, round(avg(salary)) from EMPLOYEES group by department_id order by round(avg(salary));
 
 -- kor_loan_status 테이블의 period(년도와 월)을 1차 그룹으로 region(지역) 을 2차 그룹으로한 대출 잔액(loan_jan_amt) 합계

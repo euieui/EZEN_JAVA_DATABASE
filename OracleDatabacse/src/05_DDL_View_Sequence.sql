@@ -38,7 +38,7 @@ insert into memberlist(membernum,name,phone) values (book_seq.nextVal,'홍길남
 insert into memberlist(membernum,name,phone) values (book_seq.nextVal,'홍길북','010-7777-8888');
 
 --[2] 현재 시퀀스가 어디까지 증가되어져 있는지 확인
-select book_seq.currval, book_seq.nextVal from dual;
+select book_seq.currval, book_seq.nextVal from dual; -- 오 안써본 것 같음 select book_seq.currval, book_seq.nextVal from dual;
 
 --[3] 시퀀스 수정 : 최대 증가값을 14까지로 제한
 alter sequence book_seq maxvalue 14;
